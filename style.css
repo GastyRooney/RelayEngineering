@@ -1,0 +1,99 @@
+/* Custom styles for header to ensure it stands out */
+.header {
+    background: linear-gradient(to right, #7974bd, #ca1616); /* Darker gradient */
+}
+.header h1 {
+    font-family: 'Inter', sans-serif;
+}
+.header p {
+    font-family: 'Inter', sans-serif;
+}
+.nav-link {
+    font-family: 'Inter', sans-serif;
+}
+.hero-section h2,
+.products-section h2,
+.about-us-section h2,
+.contact-us-section h2 {
+    font-family: 'Inter', sans-serif;
+}
+.product-card h3 {
+    font-family: 'Inter', sans-serif;
+}
+.tab-link {
+    font-family: 'Inter', sans-serif;
+}
+.contact-us-section button { /* Ensure the button uses Inter too */
+    font-family: 'Inter', sans-serif;
+}
+
+/* Styles for the React component */
+.react-component-container {
+    background-color: #f0fdf4; /* Light green background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px;
+}
+.react-component-container h3 {
+    color: #16a34a; /* Green text */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.react-component-container p {
+    color: #4b5563; /* Gray text */
+    font-size: 1rem;
+}
+
+/* Image gallery styles */
+.image-gallery-container {
+    width: 300px; /* Adjust as needed */
+    overflow: hidden; /* Hide images that are out of view */
+    margin: 0 auto; /* Center the gallery */
+}
+
+.image-gallery {
+    width: 100%;
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Ensure smooth snapping */
+    -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
+    scrollbar-width: thin; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+}
+
+.image-gallery::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Webkit browsers (Chrome, Safari) */
+}
+
+.image-track {
+    display: flex; /* Arrange images horizontally */
+}
+
+.image-track > img {
+    width: 300px; /* Should match the container width */
+    flex-shrink: 0; /* Prevent images from shrinking */
+    scroll-snap-align: start; /* Align image start with the snap point */
+}
+
+/* Contact Info Styles */
+.contact-info {
+    display: flex;
+    flex-direction: column; /* Stack phone and WhatsApp vertically */
+    gap: 20px; /* Space between the two contact methods */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center; /* Vertically align logo and text */
+    gap: 8px; /* Space between logo and number */
+    text-decoration: none; /* Remove default link underline */
+    color: inherit; /* Inherit text color from parent */
+}
+
+.contact-item img {
+    width: 34px; /* Adjust logo size as needed */
+    height: 34px;
+    display: inline-block; /* Prevent extra space around inline images */
+    vertical-align: middle; /* Align image vertically with text */
+}

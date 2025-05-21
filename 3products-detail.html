@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Relay-Engineering-Systems</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
+    <link rel="stylesheet" href="style.css"> <style>
+        /* Specific styles for the table on this page */
+        .product-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+        .product-table th, .product-table td {
+            border: 1px solid #e2e8f0; /* Tailwind's gray-200 */
+            padding: 1rem;
+            text-align: left;
+        }
+        .product-table th {
+            background-color: #e0f2f7; /* Tailwind's light blue */
+            font-weight: 600;
+            color: #2c5282; /* Darker blue for text */
+        }
+        .product-table img {
+            max-width: auto;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .product-table tbody tr:nth-child(even) {
+            background-color: #f7fafc; /* Tailwind's gray-50 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-inter">
+    <header class="header text-white py-4 shadow-md sticky top-0 z-10 rounded-md">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <td width="140" valign="top"><img src="logoNew.png" width="120"></td>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html#home" class="nav-link hover:text-green-300 transition duration-300">Home</a></li>
+                    <li><a href="index.html#products" class="nav-link hover:text-green-300 transition duration-300">Products</a></li>
+                    <li><a href="index.html#about" class="nav-link hover:text-green-300 transition duration-300">About Us</a></li>
+                    <li><a href="index.html#contact" class="nav-link hover:text-green-300 transition duration-300">Contact Us</a></li>
+                    <li><a href="#" class="nav-link hover:text-green-300 transition duration-300 active">Product Details</a></li>
+                </ul>
+            </nav>
+            <button id="hamburger-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle Navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-90 z-20">
+        <div class="bg-gray-800 w-80 h-full absolute right-0 p-6">
+            <div class="flex justify-end mb-4">
+                <button id="close-menu-btn" class="text-white focus:outline-none" aria-label="Close Menu">
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <nav class="block">
+                <ul class="space-y-4">
+                    <li><a href="index.html#home" class="block text-lg text-white hover:text-green-300 transition duration-300">Home</a></li>
+                    <li><a href="index.html#products" class="block text-lg text-white hover:text-green-300 transition duration-300">Products</a></li>
+                    <li><a href="index.html#about" class="block text-lg text-white hover:text-green-300 transition duration-300">About Us</a></li>
+                    <li><a href="index.html#contact" class="block text-lg text-white hover:text-green-300 transition duration-300">Contact Us</a></li>
+                    <li><a href="#" class="block text-lg text-white hover:text-green-300 transition duration-300 active">Product Details</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 py-8 md:py-16">
+        <h2 class="text-3xl font-semibold text-green-800 text-center mb-8">Inverters Showcase</h2>
+        
+        <section class="bg-white rounded-lg shadow-md p-6 md:p-10 mb-8">
+            <h3 class="text-2xl font-semibold text-green-700 mb-6">Key Features and Technical Specifications</h3>
+            <div class="overflow-x-auto">
+                <table class="product-table">
+                    <thead>
+                        <tr>
+                            <th>Product Image</th>
+                            <th>Product Name</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="Invert1.png" alt="Inverters"></td>
+                            <td><b>Huawei Residential Inverters</b></td>
+                            <td>2KTL-6KTL-L1 (Single Phase).</td>
+                        </tr>
+                        <tr>
+                            <td><img src="Invert4.png" alt="Inverters"></td>
+                            <td><b>Huawei Commercial and Industrial Inverters</b></td>
+                            <td>30-40KTL-M3.</td>
+                        </tr>
+                        <tr>
+                            <td><img src="Invert7.png" alt="Inverters"></td>
+                            <td><b>Growatt Residential Inverters</b></td>
+                            <td>3-D Phase.</td>
+                        </tr>
+                        <tr>
+                            <td><img src="Invert11.png" alt="Storage device"></td>
+                            <td><b>Growatt Commercial and Industrial Inverters</b></td>
+                            <td>MAX 100-150KTL3-X LV/MV.</td>
+                        </tr>
+                        <tr>
+                            <td><img src="Invert12.png" alt="Storage device"></td>
+                            <td><b>GoodWe Residential Inverters</b></td>
+                            <td>XS G3 Series, DNS G3 Series, MS G3 Series.</td>
+                        </tr>
+                        <tr>
+                            <td><img src="Invert14.png" alt="Storage device"></td>
+                            <td><b>GoodWe Commercial and Industrial Inverters</b></td>
+                            <td>LVSMT Series, SMT Series .</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div id="react-root"></div>
+        
+    </main>
+
+     <main class="container mx-auto px-4 py-8 md:py-16">
+        <h2 class="text-3xl font-semibold text-green-800 text-center mb-8">Explore Our Full Range of Inverters</h2>
+        
+        <section class="bg-white rounded-lg shadow-md p-6 md:p-10 mb-8">
+            <h3 class="text-2xl font-semibold text-green-700 mb-6">Project and Products</h3>
+            <div class="overflow-x-auto">
+                <table class="product-table">
+                    <thead>
+                        <tr>
+                            <th>Product Image</th>
+                            <th>Product Image</th>
+                            <th>Product Image</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="Invert2.png" alt="Inverters"></td>
+                            <td><img src="Invert3.png" alt="Inverters"></td>
+                            <td><img src="Invert5.png" alt="Inverters"></td>
+                        </tr>
+                        <tr>
+                            <td><img src="Invert6.png" alt="Inverters"></td>
+                            <td><img src="Invert8.png" alt="Inverters"></td>
+                            <td><img src="Invert9.png" alt="Inverters"></td>
+                        </tr>
+                        <tr>
+                            <td><img src="Invert10.png" alt="Inverters"></td>
+                            <td><img src="Invert13.png" alt="Inverters"></td>
+                            <td><img src="Invert15.png" alt="Inverters"></td>
+                        </tr>
+                        <tr>
+                            <td><img src="Invert16.png" alt="Inverters"></td>
+                        
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div id="react-root"></div>
+        
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 RELAY Engineering Systems. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script src="react-components.js" type="text/babel"></script> <script src="script.js"></script> </body>
+</html>
