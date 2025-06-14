@@ -7,11 +7,13 @@
     <title>Relay Engineering Systems</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
-    <link rel="stylesheet" href="style.css"> </head>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body class="bg-gray-100 font-inter">
     <header class="header text-white py-4 shadow-md sticky top-0 z-10 rounded-md">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <td width="140" valign="top"><img src="Images/logoNew.png" width="120"></td>
+            <div class="flex-shrink-0"> <img src="Images/logoNew.png" width="120" alt="Company Logo">
+            </div>
             <nav class="hidden md:block">
                 <ul class="flex space-x-6">
                     <li><a href="#home" class="nav-link hover:text-green-300 transition duration-300">Home</a></li>
@@ -32,17 +34,17 @@
         <div class="bg-gray-800 w-80 h-full absolute right-0 p-6">
             <div class="flex justify-end mb-4">
                 <button id="close-menu-btn" class="text-white focus:outline-none" aria-label="Close Menu">
-                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
             </div>
             <nav class="block">
                 <ul class="space-y-4">
-                    <li><a href="#home" class="block text-lg text-white hover:text-green-300 transition duration-300">Home</a></li>
-                    <li><a href="#products" class="block text-lg text-white hover:text-green-300 transition duration-300">Products</a></li>
-                    <li><a href="#about" class="block text-lg text-white hover:text-green-300 transition duration-300">About Us</a></li>
-                    <li><a href="#contact" class="block text-lg text-white hover:text-green-300 transition duration-300">Contact Us</a></li>
+                    <li><a href="#home" class="mobile-nav-link block text-lg text-white hover:text-green-300 transition duration-300">Home</a></li>
+                    <li><a href="#products" class="mobile-nav-link block text-lg text-white hover:text-green-300 transition duration-300">Products</a></li>
+                    <li><a href="#about" class="mobile-nav-link block text-lg text-white hover:text-green-300 transition duration-300">About Us</a></li>
+                    <li><a href="#contact" class="mobile-nav-link block text-lg text-white hover:text-green-300 transition duration-300">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
@@ -73,7 +75,7 @@
                     </div>
                     <a href="products-detail.html">
                         <button class="mt-4 bg-green-400 hover:bg-green-500 text-white font-semibold py-2 px-4 rounded-full transition duration-300">Learn More</button>
-                    </a>        
+                    </a>
                 </div>
                 <div class="product-card bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
                     <div>
@@ -115,7 +117,7 @@
                     </div>
                     <a href="1products-detail.html">
                         <button class="mt-4 bg-green-400 hover:bg-green-500 text-white font-semibold py-2 px-4 rounded-full transition duration-300">Learn More</button>
-                    </a>                    
+                    </a>
                 </div>
             </div>
         </div>
@@ -124,56 +126,51 @@
     <section id="about" class="about-us-section bg-green-50 py-16 md:py-24">
         <div class="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
             <div>
-                <h2 class="text-2xl md:text-3xl font-semibold text-green-800 mb-4"><center>About Us</center></h2>
+                <h2 class="text-2xl md:text-3xl font-semibold text-green-800 mb-4 text-center">About Us</h2>
                 <p class="text-gray-700 mb-6">
                     RELAY Engineering Systems is committed to providing sustainable energy solutions and ensuring the safety of our
                     customers. With years of experience in the industry, we offer high-quality products and exceptional
-                    service like <b>installation of Solar Panels, Fire Safety equipments, High-capacity Batteries and Advanced Inverters.</b>
+                    service like **installation of Solar Panels, Fire Safety equipments, High-capacity Batteries and Advanced Inverters.**
                 </p>
                 <br>
-                <p class="text-gray-700"> 
-                    <center>
-                        <h1 class="text-xl md:text-3xl font-semibold text-green-800 mb-4">Our vision</h1>
-                    </center>
-                    <h3>To revolutionize energy accessibility by delivering innovative and sustainable solar solutions. 
-                        We strive to empower communities, businesses, and individuals with clean, renewable power, reducing carbon footprints 
+                <p class="text-gray-700">
+                    <h1 class="text-xl md:text-3xl font-semibold text-green-800 mb-4 text-center">Our Vision</h1>
+                    <h3>To revolutionize energy accessibility by delivering innovative and sustainable solar solutions.
+                        We strive to empower communities, businesses, and individuals with clean, renewable power, reducing carbon footprints
                         and fostering a greener, more resilient future for all.
                     </h3>
                 </p>
                 <br>
                 <p class="text-gray-700">
-                    <center>
-                        <h1 class="text-xl md:text-3xl font-semibold text-green-800 mb-4">Core values</h1>
-                    </center>
-                    <h3><b>1. Sustainability:</b> Committed to providing eco-friendly energy solutions that reduce carbon footprints and protect the planet.</h3>
-                    <h3><b>2. Innovation:</b> Continuously developing cutting-edge solar technologies to maximize efficiency and accessibility.</h3>
-                    <h3><b>3. Reliability:</b> Ensuring high-quality solar systems that deliver consistent and dependable performance.</h3>
-                    <h3><b>4. Customer Focus:</b> Prioritizing customer needs with tailored solar solutions and exceptional service.</h3>
-                    <h3><b>5. Integrity:</b> Upholding transparency, honesty, and ethical business practices in all operations.</h3>
-                    <h3><b>6. Accessibility:</b> Making clean energy affordable and available to all communities, regardless of location or income.</h3>
-                    <h3><b>7. Collaboration:</b> Working with partners, governments, and communities to accelerate the transition to renewable energy.</h3>
-                    <h3><b>8. Empowerment:</b> Enabling individuals and businesses to take control of their energy future with sustainable solutions.</h3>
-                    
+                    <h1 class="text-xl md:text-3xl font-semibold text-green-800 mb-4 text-center">Core Values</h1>
+                    <h3>**1. Sustainability:** Committed to providing eco-friendly energy solutions that reduce carbon footprints and protect the planet.</h3>
+                    <h3>**2. Innovation:** Continuously developing cutting-edge solar technologies to maximize efficiency and accessibility.</h3>
+                    <h3>**3. Reliability:** Ensuring high-quality solar systems that deliver consistent and dependable performance.</h3>
+                    <h3>**4. Customer Focus:** Prioritizing customer needs with tailored solar solutions and exceptional service.</h3>
+                    <h3>**5. Integrity:** Upholding transparency, honesty, and ethical business practices in all operations.</h3>
+                    <h3>**6. Accessibility:** Making clean energy affordable and available to all communities, regardless of location or income.</h3>
+                    <h3>**7. Collaboration:** Working with partners, governments, and communities to accelerate the transition to renewable energy.</h3>
+                    <h3>**8. Empowerment:** Enabling individuals and businesses to take control of their energy future with sustainable solutions.</h3>
                 </p>
 
                 <div id="react-root"></div>
 
             </div>
-            
+
             <div class="image-gallery-container">
                 <div class="image-gallery">
-                  <div class="image-track">
-                    <img src="Images/S7.jpg" alt="Image 1">
-                    <img src="Images/F1.jpeg" alt="Image 2">
-                    <img src="Images/Bat1.jpg" alt="Image 3">
-                    <img src="Images/Invert4.png" alt="Image 4">
-                    <img src="Images/S2.jpeg" alt="Image 5">
-                    <img src="Images/F2.jpeg" alt="Image 6">
-                    <img src="Images/Battery1.png" alt="Image 7">
-                    <img src="Images/Invert6.png" alt="Image 8">
-                  </div>
+                    <div class="image-track">
+                        <img src="Images/S7.jpg" alt="Image 1">
+                        <img src="Images/F1.jpeg" alt="Image 2">
+                        <img src="Images/Bat1.jpg" alt="Image 3">
+                        <img src="Images/Invert4.png" alt="Image 4">
+                        <img src="Images/S2.jpeg" alt="Image 5">
+                        <img src="Images/F2.jpeg" alt="Image 6">
+                        <img src="Images/Battery1.png" alt="Image 7">
+                        <img src="Images/Invert6.png" alt="Image 8">
+                        <img src="Images/S7.jpg" alt="Image 9"> <img src="Images/F1.jpeg" alt="Image 10"> <img src="Images/Bat1.jpg" alt="Image 11"> <img src="Images/Invert4.png" alt="Image 12"> </div>
                 </div>
-              </div>
+            </div>
         </div>
     </section>
 
@@ -185,7 +182,7 @@
                     <h2 style="color:#585c22"><i>Feel free to contact us via email or WhatsApp or phone.</i></h2>
                     <div class="contact-info">
                         <a href="mailto:relayengineeringsystems@gmail.com" class="contact-item">
-                            <h1 ><b>Email</b></h1>
+                            <h1><b>Email</b></h1>
                             <img src="Images/mail.png" alt="Email Logo">
                             <span style="color:#0b3481">relayengineeringsystems@gmail.com</span>
                         </a>
@@ -215,7 +212,46 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    <script src="react-components.js" type="text/babel"></script> 
-    <script src="script.js"></script> 
+    <script type="text/babel">
+        // If you had any React components in react-components.js, they would go here
+        // Example:
+        // const MyReactComponent = () => <div>Hello from React!</div>;
+        // ReactDOM.render(<MyReactComponent />, document.getElementById('react-root'));
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerBtn = document.getElementById('hamburger-btn');
+            const closeMenuBtn = document.getElementById('close-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            // Toggle mobile menu on hamburger click
+            hamburgerBtn.addEventListener('click', function() {
+                mobileMenu.classList.remove('hidden');
+            });
+
+            // Close mobile menu on close button click
+            closeMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
+
+            // Close mobile menu when a link inside it is clicked
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Optional: Close menu when clicking outside of it
+            document.addEventListener('click', function(event) {
+                const isClickInsideMenu = mobileMenu.contains(event.target);
+                const isClickOnHamburger = hamburgerBtn.contains(event.target);
+
+                if (!isClickInsideMenu && !isClickOnHamburger && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

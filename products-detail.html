@@ -7,7 +7,8 @@
     <title>Solar Panel RES</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@tailwindcss/browser@latest"></script>
-    <link rel="stylesheet" href="style.css"> <style>
+    <link rel="stylesheet" href="style.css">
+    <style>
         /* Specific styles for the table on this page */
         .product-table {
             width: 100%;
@@ -25,7 +26,7 @@
             color: #2c5282; /* Darker blue for text */
         }
         .product-table img {
-            max-width: auto;
+            max-width: 100%; /* Ensure images fit within table cells */
             height: auto;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -33,12 +34,112 @@
         .product-table tbody tr:nth-child(even) {
             background-color: #f7fafc; /* Tailwind's gray-50 */
         }
+
+        /* Adjustments for mobile table view (optional, but improves readability) */
+        @media (max-width: 767px) {
+            .product-table, .product-table tbody, .product-table tr, .product-table td {
+                display: block; /* Make table elements stack */
+                width: 100%;
+            }
+            .product-table thead {
+                display: none; /* Hide table header on mobile */
+            }
+            .product-table tr {
+                margin-bottom: 1rem;
+                border: 1px solid #e2e8f0;
+                border-radius: 8px;
+                overflow: hidden; /* For rounded corners to apply to content */
+            }
+            .product-table td {
+                text-align: right;
+                padding-left: 50%; /* Make space for the pseudo-element label */
+                position: relative;
+            }
+            .product-table td::before {
+                content: attr(data-label); /* Use data-label for content */
+                position: absolute;
+                left: 0;
+                width: 45%; /* Space for the label */
+                padding-left: 1rem;
+                font-weight: bold;
+                text-align: left;
+                white-space: nowrap; /* Prevent label from wrapping */
+            }
+            /* Specific labels for each column on mobile */
+            .product-table td:nth-of-type(1)::before { content: "Image:"; }
+            .product-table td:nth-of-type(2)::before { content: "Product Name:"; }
+            .product-table td:nth-of-type(3)::before { content: "Description:"; }
+        }
+    </style>
+      <style>
+        /* Specific styles for the table on this page */
+        .product-table1 {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+        .product-table1 th, .product-table1 td {
+            border: 1px solid #e2e8f0; /* Tailwind's gray-200 */
+            padding: 1rem;
+            text-align: left;
+        }
+        .product-table1 th {
+            background-color: #e0f2f7; /* Tailwind's light blue */
+            font-weight: 600;
+            color: #2c5282; /* Darker blue for text */
+        }
+        .product-table1 img {
+            max-width: 100%; /* Ensure images fit within table cells */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .product-table1 tbody tr:nth-child(even) {
+            background-color: #f7fafc; /* Tailwind's gray-50 */
+        }
+
+        /* Adjustments for mobile table view (optional, but improves readability) */
+        @media (max-width: 767px) {
+            .product-table1, .product-table1 tbody, .product-table1 tr, .product-table1 td {
+                display: block; /* Make table elements stack */
+                width: 100%;
+            }
+            .product-table1 thead {
+                display: none; /* Hide table header on mobile */
+            }
+            .product-table1 tr {
+                margin-bottom: 1rem;
+                border: 1px solid #e2e8f0;
+                border-radius: 8px;
+                overflow: hidden; /* For rounded corners to apply to content */
+            }
+            .product-table1 td {
+                text-align: right;
+                padding-left: 50%; /* Make space for the pseudo-element label */
+                position: relative;
+            }
+            .product-table1 td::before {
+                content: attr(data-label); /* Use data-label for content */
+                position: absolute;
+                left: 0;
+                width: 45%; /* Space for the label */
+                padding-left: 1rem;
+                font-weight: bold;
+                text-align: left;
+                white-space: nowrap; /* Prevent label from wrapping */
+            }
+            /* Specific labels for each column on mobile */
+            .product-table1 td:nth-of-type(1)::before { content: ">>>"; }
+            .product-table1 td:nth-of-type(2)::before { content: ">>>"; }
+            .product-table1 td:nth-of-type(3)::before { content: ">>>"; }
+        }
     </style>
 </head>
 <body class="bg-gray-100 font-inter">
     <header class="header text-white py-4 shadow-md sticky top-0 z-10 rounded-md">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <td width="140" valign="top"><img src="Images/logoNew.png" width="120"></td>
+            <div class="flex-shrink-0"> <img src="Images/logoNew.png" width="120" alt="Company Logo">
+            </div>
             <nav class="hidden md:block">
                 <ul class="flex space-x-6">
                     <li><a href="index.html#home" class="nav-link hover:text-green-300 transition duration-300">Home</a></li>
@@ -59,17 +160,17 @@
         <div class="bg-gray-800 w-80 h-full absolute right-0 p-6">
             <div class="flex justify-end mb-4">
                 <button id="close-menu-btn" class="text-white focus:outline-none" aria-label="Close Menu">
-                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
             </div>
             <nav class="block">
                 <ul class="space-y-4">
-                    <li><a href="index.html#home" class="block text-lg text-white hover:text-green-300 transition duration-300">Home</a></li>
-                    <li><a href="index.html#products" class="block text-lg text-white hover:text-green-300 transition duration-300">Products</a></li>
-                    <li><a href="index.html#about" class="block text-lg text-white hover:text-green-300 transition duration-300">About Us</a></li>
-                    <li><a href="index.html#contact" class="block text-lg text-white hover:text-green-300 transition duration-300">Contact Us</a></li>
+                    <li><a href="index.html#home" class="mobile-nav-link block text-lg text-white hover:text-green-300 transition duration-300">Home</a></li>
+                    <li><a href="index.html#products" class="mobile-nav-link block text-lg text-white hover:text-green-300 transition duration-300">Products</a></li>
+                    <li><a href="index.html#about" class="mobile-nav-link block text-lg text-white hover:text-green-300 transition duration-300">About Us</a></li>
+                    <li><a href="index.html#contact" class="mobile-nav-link block text-lg text-white hover:text-green-300 transition duration-300">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
@@ -77,7 +178,7 @@
 
     <main class="container mx-auto px-4 py-8 md:py-16">
         <h2 class="text-3xl font-semibold text-green-800 text-center mb-8">Solar Panel Showcase</h2>
-        
+
         <section class="bg-white rounded-lg shadow-md p-6 md:p-10 mb-8">
             <h3 class="text-2xl font-semibold text-green-700 mb-6">Our Advanced Solutions</h3>
             <div class="overflow-x-auto">
@@ -91,34 +192,34 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><img src="Images/S1.jpeg" alt="Solar Panel 1"></td>
-                            <td><b>Residential Solar Panel System</b></td>
-                            <td>Generate clean, renewable energy for household use.</td>
+                            <td data-label="Image"><img src="Images/S1.jpeg" alt="Solar Panel 1"></td>
+                            <td data-label="Product Name"><b>Residential Solar Panel System</b></td>
+                            <td data-label="Description">Generate clean, renewable energy for household use.</td>
                         </tr>
                         <tr>
-                            <td><img src="Images/S2.jpeg" alt="Solar Panel 2"></td>
-                            <td><b>Rooftop Solar Panel System</b></td>
-                            <td>Suitable for urban and rural homes with limited roof space.</td>
-                        </tr>
-                         <tr>
-                            <td><img src="Images/S3.jpeg" alt="Solar Panel 3"></td>
-                            <td><b>Residential Rooftop Solar Panel Array</b></td>
-                            <td>Ideal for homes with high energy demands or multiple appliances.</td>
+                            <td data-label="Image"><img src="Images/S2.jpeg" alt="Solar Panel 2"></td>
+                            <td data-label="Product Name"><b>Rooftop Solar Panel System</b></td>
+                            <td data-label="Description">Suitable for urban and rural homes with limited roof space.</td>
                         </tr>
                         <tr>
-                            <td><img src="Images/S4.jpeg" alt="Solar Panel 4"></td>
-                            <td><b>Polycrystalline Solar Panel Array</b></td>
-                            <td>Expertly designed to harness solar energy efficiently.</td>
+                            <td data-label="Image"><img src="Images/S3.jpeg" alt="Solar Panel 3"></td>
+                            <td data-label="Product Name"><b>Residential Rooftop Solar Panel Array</b></td>
+                            <td data-label="Description">Ideal for homes with high energy demands or multiple appliances.</td>
                         </tr>
-                         <tr>
-                            <td><img src="Images/S5.jpeg" alt="Solar Panel 5"></td>
-                            <td><b>Residential Rooftop Solar Panels</b></td>
-                            <td>Provide a clean and efficient source of renewable energy.</td>
+                        <tr>
+                            <td data-label="Image"><img src="Images/S4.jpeg" alt="Solar Panel 4"></td>
+                            <td data-label="Product Name"><b>Polycrystalline Solar Panel Array</b></td>
+                            <td data-label="Description">Expertly designed to harness solar energy efficiently.</td>
                         </tr>
-                         <tr>
-                            <td><img src="Images/S7.jpg" alt="Solar Panel 6"></td>
-                            <td><b>Ground-Mounted Monocrystalline Solar Panel Array</b></td>
-                            <td>Indicates a robust and high-performance solar energy solution.</td>
+                        <tr>
+                            <td data-label="Image"><img src="Images/S5.jpeg" alt="Solar Panel 5"></td>
+                            <td data-label="Product Name"><b>Residential Rooftop Solar Panels</b></td>
+                            <td data-label="Description">Provide a clean and efficient source of renewable energy.</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Image"><img src="Images/S7.jpg" alt="Solar Panel 6"></td>
+                            <td data-label="Product Name"><b>Ground-Mounted Monocrystalline Solar Panel Array</b></td>
+                            <td data-label="Description">Indicates a robust and high-performance solar energy solution.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -126,16 +227,16 @@
         </section>
 
         <div id="react-root"></div>
-        
+
     </main>
 
-     <main class="container mx-auto px-4 py-8 md:py-16">
+    <main class="container mx-auto px-4 py-8 md:py-16">
         <h2 class="text-3xl font-semibold text-green-800 text-center mb-8">Solar Projects</h2>
-        
+
         <section class="bg-white rounded-lg shadow-md p-6 md:p-10 mb-8">
             <h3 class="text-2xl font-semibold text-green-700 mb-6">Completed Projects and Process</h3>
             <div class="overflow-x-auto">
-                <table class="product-table">
+                <table class="product-table1">
                     <thead>
                         <tr>
                             <th></th>
@@ -145,24 +246,24 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><img src="Images/SoInst1.jpg" alt="Commercial Solar Panel 1"></td>
-                            <td><img src="Images/SoInst2.jpg" alt="Commercial Solar Panel 2"></td>
-                            <td><img src="Images/SoInst12.jpg" alt="Commercial Solar Panel 3"></td>
+                            <td data-label="Image 1"><img src="Images/SoInst1.jpg" alt="Commercial Solar Panel 1"></td>
+                            <td data-label="Image 2"><img src="Images/SoInst2.jpg" alt="Commercial Solar Panel 2"></td>
+                            <td data-label="Image 3"><img src="Images/SoInst12.jpg" alt="Commercial Solar Panel 3"></td>
                         </tr>
                         <tr>
-                            <td><img src="Images/SoInst4.jpg" alt="Commercial Solar Panel 4"></td>
-                            <td><img src="Images/SoInst5.jpg" alt="Commercial Solar Panel 5"></td>
-                            <td><img src="Images/SoInst6.jpg" alt="Commercial Solar Panel 6"></td>
+                            <td data-label="Image 4"><img src="Images/SoInst4.jpg" alt="Commercial Solar Panel 4"></td>
+                            <td data-label="Image 5"><img src="Images/SoInst5.jpg" alt="Commercial Solar Panel 5"></td>
+                            <td data-label="Image 6"><img src="Images/SoInst6.jpg" alt="Commercial Solar Panel 6"></td>
                         </tr>
                         <tr>
-                            <td><img src="Images/SoInst7.jpg" alt="Commercial Solar Panel 7"></td>
-                            <td><img src="Images/SoInst8.jpg" alt="Commercial Solar Panel 8"></td>
-                            <td><img src="Images/SoInst16.jpg" alt="Commercial Solar Panel 9"></td>
+                            <td data-label="Image 7"><img src="Images/SoInst7.jpg" alt="Commercial Solar Panel 7"></td>
+                            <td data-label="Image 8"><img src="Images/SoInst8.jpg" alt="Commercial Solar Panel 8"></td>
+                            <td data-label="Image 9"><img src="Images/SoInst16.jpg" alt="Commercial Solar Panel 9"></td>
                         </tr>
                         <tr>
-                            <td><img src="Images/SoInst19.jpg" alt="Commercial Solar Panel 10"></td>
-                            <td><img src="Images/SoInst23.jpg" alt="Commercial Solar Panel 11"></td>
-                            <td><img src="Images/SoInst9.jpg" alt="Commercial Solar Panel 12"></td>
+                            <td data-label="Image 10"><img src="Images/SoInst19.jpg" alt="Commercial Solar Panel 10"></td>
+                            <td data-label="Image 11"><img src="Images/SoInst23.jpg" alt="Commercial Solar Panel 11"></td>
+                            <td data-label="Image 12"><img src="Images/SoInst9.jpg" alt="Commercial Solar Panel 12"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -170,7 +271,7 @@
         </section>
 
         <div id="react-root"></div>
-        
+
     </main>
 
     <footer class="bg-gray-800 text-white py-6">
@@ -183,5 +284,46 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    <script src="react-components.js" type="text/babel"></script> <script src="script.js"></script> </body>
+    <script type="text/babel">
+        // Your React components would go here if you have any.
+        // Example:
+        // const MyComponent = () => <div>Hello from React!</div>;
+        // ReactDOM.render(<MyComponent />, document.getElementById('react-root'));
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerBtn = document.getElementById('hamburger-btn');
+            const closeMenuBtn = document.getElementById('close-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            // Toggle mobile menu on hamburger click
+            hamburgerBtn.addEventListener('click', function() {
+                mobileMenu.classList.remove('hidden');
+            });
+
+            // Close mobile menu on close button click
+            closeMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
+
+            // Close mobile menu when a link inside it is clicked
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Optional: Close menu when clicking outside of it
+            document.addEventListener('click', function(event) {
+                const isClickInsideMenu = mobileMenu.contains(event.target);
+                const isClickOnHamburger = hamburgerBtn.contains(event.target);
+
+                if (!isClickInsideMenu && !isClickOnHamburger && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
 </html>
