@@ -71,7 +71,7 @@
             .product-table td:nth-of-type(3)::before { content: "Description:"; }
         }
     </style>
-      <style>
+    <style>
         /* Specific styles for the table on this page */
         .product-table1 {
             width: 100%;
@@ -115,23 +115,8 @@
             }
             .product-table1 td {
                 text-align: right;
-                padding-left: 50%; /* Make space for the pseudo-element label */
                 position: relative;
             }
-            .product-table1 td::before {
-                content: attr(data-label); /* Use data-label for content */
-                position: absolute;
-                left: 0;
-                width: 45%; /* Space for the label */
-                padding-left: 1rem;
-                font-weight: bold;
-                text-align: left;
-                white-space: nowrap; /* Prevent label from wrapping */
-            }
-            /* Specific labels for each column on mobile */
-            .product-table1 td:nth-of-type(1)::before { content: ">>>"; }
-            .product-table1 td:nth-of-type(2)::before { content: ">>>"; }
-            .product-table1 td:nth-of-type(3)::before { content: ">>>"; }
         }
     </style>
 </head>
@@ -245,7 +230,7 @@
                     <h3><b>4. AC Pumps:</b> Use an inverter to convert solar power into alternating current to power the pump.</h3>
                 </p>
             </div>
-            <table class="product-table">
+            <table class="product-table1">
                 <tr>
                     <td><img src="Images/Advan2.png" alt="image 1"></td>
                     <td><img src="Images/Advan.png" alt="image 2"></td>
@@ -270,7 +255,7 @@
                     <h3><b>4.</b> Net metering allows users to earn credits for excess electricity fed into the grid, reducing electricity bills.</h3>
                 </p>
             </div>
-            <table class="product-table">
+            <table class="product-table1">
                 <tr>
                     <td><img src="Images/GridCon.png" alt="image 1"></td>
                     <td><img src="Images/GridText.png" alt="image 2"></td>
@@ -295,7 +280,7 @@
                     <h3><b>4.</b> EV charging compatibility enables direct charging of electric vehicles.</h3>
                 </p>
             </div>
-            <table class="product-table">
+            <table class="product-table1">
                 <tr>
                     <td><img src="Images/Carport.png" alt="image 1"></td>
                     <td><img src="Images/CarportText.png" alt="image 2"></td>
@@ -320,7 +305,7 @@
                     <h3><b>4.</b> Grid connection provides backup power when solar and battery energy are insufficient.</h3>
                 </p>
             </div>
-            <table class="product-table">
+            <table class="product-table1">
                 <tr>
                     <td><img src="Images/HybridS.png" alt="image 1"></td>
                     <td><img src="Images/HybridText.png" alt="image 2"></td>
@@ -345,7 +330,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td data-label="Image 1"><img src="Images/SoInst1.jpg" alt="Commercial Solar Panel 1"></td>
+                            <td><img src="Images/SoInst1.jpg" alt="Commercial Solar Panel 1"></td>
                             <td data-label="Image 2"><img src="Images/SoInst2.jpg" alt="Commercial Solar Panel 2"></td>
                             <td data-label="Image 3"><img src="Images/SoInst12.jpg" alt="Commercial Solar Panel 3"></td>
                         </tr>

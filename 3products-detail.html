@@ -69,11 +69,54 @@
             .product-table.inverter-showcase td:nth-of-type(1)::before { content: "Image:"; }
             .product-table.inverter-showcase td:nth-of-type(2)::before { content: "Product Name:"; }
             .product-table.inverter-showcase td:nth-of-type(3)::before { content: "Description:"; }
+        }
+    </style>
+    <style>
+        /* Specific styles for the table on this page */
+        .product-table1 {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+        .product-table1 th, .product-table1 td {
+            border: 1px solid #e2e8f0; /* Tailwind's gray-200 */
+            padding: 1rem;
+            text-align: left;
+        }
+        .product-table1 th {
+            background-color: #e0f2f7; /* Tailwind's light blue */
+            font-weight: 600;
+            color: #2c5282; /* Darker blue for text */
+        }
+        .product-table1 img {
+            max-width: 100%; /* Ensure images fit within table cells */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .product-table1 tbody tr:nth-child(even) {
+            background-color: #f7fafc; /* Tailwind's gray-50 */
+        }
 
-            /* Specific labels for the second table (Explore Our Full Range) */
-            .product-table.full-range-table td:nth-of-type(1)::before { content: ">>>"; }
-            .product-table.full-range-table td:nth-of-type(2)::before { content: ">>>"; }
-            .product-table.full-range-table td:nth-of-type(3)::before { content: ">>>"; }
+        /* Adjustments for mobile table view (optional, but improves readability) */
+        @media (max-width: 767px) {
+            .product-table1, .product-table1 tbody, .product-table1 tr, .product-table1 td {
+                display: block; /* Make table elements stack */
+                width: 100%;
+            }
+            .product-table1 thead {
+                display: none; /* Hide table header on mobile */
+            }
+            .product-table1 tr {
+                margin-bottom: 1rem;
+                border: 1px solid #e2e8f0;
+                border-radius: 8px;
+                overflow: hidden; /* For rounded corners to apply to content */
+            }
+            .product-table1 td {
+                text-align: right;
+                position: relative;
+            }
         }
     </style>
 </head>
@@ -177,7 +220,7 @@
         <section class="bg-white rounded-lg shadow-md p-6 md:p-10 mb-8">
             <h3 class="text-2xl font-semibold text-green-700 mb-6">Project and Products</h3>
             <div class="overflow-x-auto">
-                <table class="product-table full-range-table"> <thead>
+                <table class="product-table1"> <thead>
                         <tr>
                             <th></th>
                             <th><center>Product Image</center></th>
