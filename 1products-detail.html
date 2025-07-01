@@ -26,8 +26,11 @@
             color: #2c5282; /* Darker blue for text */
         }
         .product-table img {
-            max-width: 100%; /* Ensure images fit within table cells */
-            height: auto;
+            /* --- MODIFICATION START --- */
+            width: 200px; /* Set a fixed width for all images in this table */
+            height: 150px; /* Set a fixed height for all images in this table */
+            object-fit: cover; /* This makes images fill the area, cropping if necessary, while maintaining aspect ratio */
+            /* --- MODIFICATION END --- */
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
@@ -89,8 +92,11 @@
             color: #2c5282; /* Darker blue for text */
         }
         .product-table1 img {
-            max-width: 100%; /* Ensure images fit within table cells */
-            height: auto;
+            /* --- MODIFICATION START --- */
+            width: 250px;  /* Set a fixed width for all images in this table */
+            height: 180px; /* Set a fixed height for all images in this table */
+            object-fit: cover; /* This makes images fill the area, cropping if necessary, while maintaining aspect ratio */
+            /* --- MODIFICATION END --- */
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
@@ -128,9 +134,9 @@
             <nav class="hidden md:block">
                 <ul class="flex space-x-6">
                     <li><a href="index.html#home" class="nav-link hover:text-green-300 transition duration-300">Home</a></li>
-                    <li><a href="index.html#products" class="nav-link hover:text-green-300 transition duration-300">Products</a></li>
-                    <li><a href="index.html#about" class="nav-link hover:text-green-300 transition duration-300">About Us</a></li>
-                    <li><a href="index.html#contact" class="nav-link hover:text-green-300 transition duration-300">Contact Us</a></li>
+                    <li><a href="products-detail.html#Solar Panels" class="nav-link hover:text-green-300 transition duration-300">Solar Panels</a></li>
+                    <li><a href="3products-detail.html#Inverters" class="nav-link hover:text-green-300 transition duration-300">Inverters</a></li>
+                    <li><a href="2products-detail.html#Battery" class="nav-link hover:text-green-300 transition duration-300">Battery</a></li>
                 </ul>
             </nav>
             <button id="hamburger-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle Navigation">
@@ -153,9 +159,9 @@
             <nav class="block">
                 <ul class="space-y-4">
                     <li><a href="index.html#home" class="mobile-nav-link block text-lg text-white hover:text-green-300 transition duration-300">Home</a></li>
-                    <li><a href="index.html#products" class="mobile-nav-link block text-lg text-white hover:text-green-300 transition duration-300">Products</a></li>
-                    <li><a href="index.html#about" class="mobile-nav-link block text-lg text-white hover:text-green-300 transition duration-300">About Us</a></li>
-                    <li><a href="index.html#contact" class="mobile-nav-link block text-lg text-white hover:text-green-300 transition duration-300">Contact Us</a></li>
+                    <li><a href="products-detail.html#Solar Panels" class="mobile-nav-link block text-lg text-white hover:text-green-300 transition duration-300">Solar Panels</a></li>
+                    <li><a href="3products-detail.html#Inverters" class="mobile-nav-link block text-lg text-white hover:text-green-300 transition duration-300">Inverters</a></li>
+                    <li><a href="2products-detail.html#Battery" class="mobile-nav-link block text-lg text-white hover:text-green-300 transition duration-300">Battery</a></li>
                 </ul>
             </nav>
         </div>
