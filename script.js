@@ -1,3 +1,15 @@
+import Head from 'next/head';
+
+function HomePage() {
+  return (
+    <Head>
+      <meta name="description" content="Relay Engineering Systems is committed to providing sustainable energy solutions and 
+    ensuring the safety of our customers. With years of experience in the industry, we offer high-quality products and 
+    exceptional service like installation of Solar Panels, High-capacity Batteries, Advanced Inverters and Fire Safety equipment." />
+    </Head>
+  );
+}
+
 // Hamburger menu functionality
 const hamburgerBtn = document.getElementById("hamburger-btn");
 const mobileMenu = document.getElementById("mobile-menu");
